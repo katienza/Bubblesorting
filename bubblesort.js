@@ -25,48 +25,49 @@ while(swapped)
 */
 
 // while loop
-const bsort = arr => {
-  let counter = 0;
-  let swapped = true;
-  while(swapped) {
-    swapped = false;
-    for (let i = 0; i < (arr.length - counter); i++) {
-      if (arr[i] > arr[i + 1]) {
-        let temp = arr[i];
-        arr[i] = arr[i+1];
-        arr[i+1] = temp;
-        swapped = true;
-      }
-    }
-    counter++;
-  }
-  return arr;
-};
+// const bsort = arr => {
+//   let counter = 0;
+//   let swapped = true;
+//   while(swapped) {
+//     swapped = false;
+//     for (let i = 0; i < (arr.length - counter); i++) {
+//       if (arr[i] > arr[i + 1]) {
+//         let temp = arr[i];
+//         arr[i] = arr[i+1];
+//         arr[i+1] = temp;
+//         swapped = true;
+//       }
+//     }
+//     counter++;
+//   }
+//   return arr;
+// };
 
 // nested for loops
-function bubbleSort(array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length - 1 - i; j++) {
-      if (array[j] > array[j + 1]) {
-        let temp = array[j];
-        array[j] = array[j + 1];
-        array[j + 1] = temp;
-      }
-    }
-  }
+// function bubbleSort(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = 0; j < array.length - 1 - i; j++) {
+//       if (array[j] > array[j + 1]) {
+//         let temp = array[j];
+//         array[j] = array[j + 1];
+//         array[j + 1] = temp;
+//       }
+//     }
+//   }
 
-  return array;
-};
+//   return array;
+// };
 
 // using a helper function
 function bubbleSort(array) {
   for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length - 1 - i; i++) {
+    for (let j = 0; j < array.length - 1 - i; j++) {
       if (array[j] > array[j + 1]) {
         swap(array, j, j+1);
       }
     }
   }
+  return array;
 }
 
 function swap(array, current, next) {
