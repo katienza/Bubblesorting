@@ -43,6 +43,26 @@ const bsort = arr => {
   return arr;
 };
 
+// sort and swap inefficiently
+function bubbleSort(arr) {
+  let swapped = true;
+
+  while (swapped) {
+    swapped = false;
+    
+    for (var i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        var temp = arr[i + 1];
+        arr[i + 1] = arr[i];
+        arr[i] = temp;
+        swapped = true;
+      }
+    }
+  }
+ 
+  return arr;
+}
+
 // nested for loops
 function bubbleSort(array) {
   for (let i = 0; i < array.length; i++) {
@@ -68,10 +88,10 @@ function bubbleSort(array) {
     }
   }
   return array;
-}
+};
 
 function swap(array, current, next) {
   let temp = array[current];
   array[current] = array[next];
   array[next] = temp;
-}
+};
